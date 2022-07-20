@@ -1,0 +1,33 @@
+1. Como é chamado um JOIN em um banco de dados e para que é usado?
+
+	A sintaxe do comando JOIN é:
+
+	SELECT * FROM table01 as tb1 JOIN table02 as tb2 ON tb1.att = tb2.att;
+
+	Este comando é utilizado para unir duas tabelas distintas sobre um predicado, ou algo que elas tenham em comum. Desta forma, é possível obter os dados de ambas as tabelas relacionadas na consulta.
+
+2. Explique os tipos de JOIN.
+
+	Eles diferem quanto o retorno. Neste caso:
+
+		- Inner Join - Join padrão. Considera apenas o que ambas as tabelas têm em comum.
+
+		- Left Join - Considera o que ambas as tabelas têm em comum e os atributos sobrassalentes da tabela mais à esquerda.
+
+		- Right Join - Considera o que ambas as tabelas têm em comum e os atributos sobressalentes da tabela mais à direita.
+
+		- Full Outter Join - Considera todos os atributos de todas as tabelas.
+
+3. Para que serve o GROUP BY?
+
+	O GROUP BY é a cláusula SQL utilizada para agrupar registros que possuem algum atributo em comum. Neste caso, esta instrução gera um registro único para cada grupo de tuplas que compartilham as colunas indicadas na construção. Normalmente é usado junto de funções de agregação, mas não de forma obrigatória. Reduz o número de registros.
+
+4. Para que serve o HAVING?
+
+	O HAVING é uma cláusula semelhante ao WHERE, entretanto, aplicada sobre grupos de registros resultantes da instrução GROUP BY.
+
+5. Escreva uma consulta genérica para cada um dos seguintes diagramas:
+
+	a) SELECT lt.id as lt_id, rt.id_lt as rt_id_lt FROM left_table as lt JOIN right_table as rt ON lt.id = rt.id_lt;
+
+	b) SELECT * FROM left_table as lt LEFT JOIN right_table as rt ON lt.id = rt.id_lt;
